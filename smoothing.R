@@ -106,8 +106,6 @@ calc.p.dist.matrix <- function(M.ref, M.alt, K=NULL, DELTA=NULL,
 
     # Find the nearest neighbors for each cell.
     NN <- matrix(NA, K, ncol(S))
-    print(dim(NN))
-    print(dim(S))
     for(j in 1:ncol(S)) {
       O <- order(S[,j], decreasing=TRUE)
       NN[,j] <- sort(O[2:(2+K-1)])  # ignore highest score (matches itself)
