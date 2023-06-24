@@ -16,7 +16,7 @@ ALT_readCountMatrix <- ALT_readCountMatrix[, 1:20]
 REF_readCountMatrix <- REF_readCountMatrix[, 1:20]
 
 res <- make.genotype.and.probability.matrices(M.ref=REF_readCountMatrix, M.alt=ALT_readCountMatrix,
-                                       DELTA=0.5, num.cores=4)
+                                       DELTA=0.5, num.cores=8)
 genotypes <- as.data.frame(res[1])
 names(genotypes) <- names(REF_readCountMatrix)
 rownames(genotypes) <- picked_sites
