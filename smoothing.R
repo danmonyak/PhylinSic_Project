@@ -1,3 +1,5 @@
+library('parallel')
+
 # FUNCTION:
 # make.genotype.and.probability.matrices
 #               Calls the genotypes across sites and cells.
